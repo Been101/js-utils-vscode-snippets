@@ -1,0 +1,50 @@
+{
+  "launch Full Screen": {
+    "prefix": "launchFullScreen",
+    "body": [
+      "function launchFullScreen(element) {",
+      "\tif(element.requestFullscreen) {",
+      "\t\telement.requestFullscreen();",
+      "\t} else if(element.mozRequestFullScreen) {",
+      "\t\telement.mozRequestFullScreen();",
+      "\t} else if(element.webkitRequestFullscreen) {",
+      "\t\telement.webkitRequestFullscreen();",
+      "\t} else if(element.msRequestFullscreen) {",
+      "\t\telement.msRequestFullscreen();",
+      "\t}",
+      "\treturn true;",
+      "}"
+    ],
+    "description": "进入全屏模式。\r\n Launch Full Screen. \r\n"
+  },
+  "exit Full Screen": {
+    "prefix": "exitFullScreen",
+    "body": [
+      "function exitFullScreen() {",
+      "\tif(document.exitFullscreen) {",
+      "\t\tdocument.exitFullscreen();",
+      "\t} else if(document.mozCancelFullScreen) {",
+      "\t\tdocument.mozCancelFullScreen();",
+      "\t} else if(document.webkitExitFullscreen) {",
+      "\t\tdocument.webkitExitFullscreen();",
+      "\t}",
+      "\treturn false;",
+      "}"
+    ],
+    "description": "退出全屏模式。\r\n Exit Full Screen. \r\n"
+  },
+  "get Query Params": {
+    "prefix": "getQueryParams",
+    "body": [
+      "function getQueryParams(name) {",
+      "\tlet reg = new RegExp(\"(^|&)\" + name + \"=([^&]*)(&|$)\", \"i\");",
+      "\tlet r = window.location.search.substr(1).match(reg);",
+      "\tif (r != null) {",
+      "\t\treturn decodeURIComponent(r[2]);",
+      "\t};",
+      "\treturn null;",
+      "}"
+    ],
+    "description": "正则表达式获取地址栏参数。\r\t Get url query params."
+  }
+}

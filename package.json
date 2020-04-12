@@ -32,6 +32,14 @@
       {
         "language": "typescript",
         "path": "./snippets/date-utils.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/browser-utils.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/browser-utils.json"
       }
     ]
   },

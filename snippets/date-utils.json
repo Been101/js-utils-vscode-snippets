@@ -1,18 +1,4 @@
 {
-  "get Query Params": {
-    "prefix": "getQueryParams",
-    "body": [
-      "function getQueryParams(name) {",
-      "\tlet reg = new RegExp(\"(^|&)\" + name + \"=([^&]*)(&|$)\", \"i\");",
-      "\tlet r = window.location.search.substr(1).match(reg);",
-      "\tif (r != null) {",
-      "\t\treturn decodeURIComponent(r[2]);",
-      "\t};",
-      "\treturn null;",
-      "}"
-    ],
-    "description": "正则表达式获取地址栏参数。\r\t Get url query params."
-  },
   "get Days Of Month": {
     "prefix": "getDaysOfMonth",
     "body": [
