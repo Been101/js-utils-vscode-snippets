@@ -1,0 +1,41 @@
+{
+  "name": "js-utils-vscode-snippets",
+  "displayName": "JS Utils VSCode Snippets",
+  "description": "js utils",
+  "icon": "images/js-logo.png",
+  "version": "1.0.0",
+  "publisher": "been",
+  "engines": {
+    "vscode": "^1.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Been101/js-utils-vscode-snippets.git"
+  },
+  "scripts": {
+    "build": "vsce package -o js-utils-vscode-snippets-1.0.0.vsix",
+    "install": "yarn build && code --install-extension js-utils-vscode-snippets-1.0.0.vsix"
+  },
+  "keywords": [
+    "javascript",
+    "javascript utils Snippets"
+  ],
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/date-utils.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/date-utils.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "vsce": "^1.75.0"
+  }
+}
